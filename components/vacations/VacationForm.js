@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import React, { useRef } from 'react';
-import { useReducer } from 'react/cjs/react.production.min';
 
 function VacationForm({addVacationList}) {
     const nameRef = useRef();
@@ -23,7 +22,7 @@ function VacationForm({addVacationList}) {
             })
             console.log(newVacation);
             
-            router.push('/vacations');
+            router.reload();
         }catch(e){
             console.log(e.message);
         }
